@@ -7,16 +7,16 @@ export const ContactForm = ({ addNameNumber }) => {
   const hendlerChange = e => {
     const { name, value } = e.target;
     const inputNumber = value.replace(/[^0-9+]/, '');
-    
-    if (name === 'number') {
-    return setNumber(inputNumber);
-    }
 
     if (name === 'number' && value !== inputNumber) {
-     return alert('Please use numbers only');
+      alert('Please use numbers only');
     }
-    
-     setName(value)
+
+    if (name === 'number') {
+      return setNumber(inputNumber);
+    }
+
+    setName(value);
   };
 
   const handlerAdd = () => {
@@ -60,4 +60,3 @@ export const ContactForm = ({ addNameNumber }) => {
     </form>
   );
 };
-

@@ -69,7 +69,7 @@ export const App = () => {
       }}
     >
       <h1>Phonebook</h1>
-      <ContactForm addNameNumber={handlerAddNameNumber} />
+      <ContactForm addNameNumber={handlerAddNameNumber}/>
       <h2>Find contact by name</h2>
       <Filter filters={filters} filterName={handlerFilterName} />
       <ContactList
